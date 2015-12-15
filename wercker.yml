@@ -3,5 +3,6 @@ build:
   steps:
     - script:
         code: |-
+          sudo /sbin/vboxconfig
           packer validate -var-file=centos-7/variables.json template.json
           packer build    -var-file=centos-7/variables.json template.json
