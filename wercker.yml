@@ -1,9 +1,8 @@
-box: wercker/php@2.0.0
+box: ngyuki/vagrant-virtualbox
 build:
   steps:
     - script:
         code: |-
-          phpenv versions
-          phpenv global 5.6
-          php -v
-          php -i
+          vboxmanage --version
+          vagrant --version
+          packer version
