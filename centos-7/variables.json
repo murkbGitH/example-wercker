@@ -1,0 +1,6 @@
+{
+    "vm_name": "centos-7",
+    "iso_url": "http://ftp.iij.ad.jp/pub/linux/centos/7.2.1511/isos/x86_64/CentOS-7-x86_64-Minimal-1511.iso",
+    "iso_checksum": "88c0437f0a14c6e2c94426df9d43cd67",
+    "ius_release_url": "https://centos7.iuscommunity.org/ius-release.rpm"
+}
