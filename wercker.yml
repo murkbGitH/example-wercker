@@ -4,15 +4,15 @@ build:
     - script:
         code: |-
           uname -a
-          lspci
-          lsusb
-          lscpu
-          lsblk
-          lsmod
-          dmidecode -t system
-          dmidecode -t bios
-          dmidecode -t processor
-          dmidecode -t memory
-          vboxmanage --version
+          lspci || true
+          lsusb || true
+          lscpu || true
+          lsblk || true
+          lsmod || true
+          dmidecode -t system || true
+          dmidecode -t bios || true
+          dmidecode -t processor || true
+          dmidecode -t memory || true
+          vboxmanage --version || true
           vagrant --version
           packer version
