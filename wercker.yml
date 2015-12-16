@@ -3,6 +3,16 @@ build:
   steps:
     - script:
         code: |-
+          uname -a
+          lspci
+          lsusb
+          lscpu
+          lsblk
+          lsmod
+          dmidecode -t system
+          dmidecode -t bios
+          dmidecode -t processor
+          dmidecode -t memory
           vboxmanage --version
           vagrant --version
           packer version
