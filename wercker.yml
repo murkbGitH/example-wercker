@@ -1,18 +1,7 @@
-box: ngyuki/vagrant-virtualbox
+box: ngyuki/example
 build:
   steps:
     - script:
         code: |-
           uname -a
-          lspci || true
-          lsusb || true
-          lscpu || true
-          lsblk || true
-          lsmod || true
-          dmidecode -t system || true
-          dmidecode -t bios || true
-          dmidecode -t processor || true
-          dmidecode -t memory || true
-          vboxmanage --version || true
-          vagrant --version
-          packer version
+          php -v
