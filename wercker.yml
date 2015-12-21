@@ -9,4 +9,7 @@ build:
 deploy:
   steps:
     - script:
-        code: echo $OREORE
+        code: |-
+          pwd
+          ls -l
+          type aws || true
