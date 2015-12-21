@@ -5,3 +5,7 @@ build:
         code: |-
           uname -a
           php -v
+deploy:
+  steps:
+    - script:
+        code: echo $OREORE
