@@ -5,11 +5,15 @@ build:
         code: |-
           uname -a
           php -v
-          php -i > phpinfo.txt
+          pwd
+          php -i > source.txt
+          php -i > $WERCKER_OUTPUT_DIR/output.txt
 deploy:
   steps:
     - script:
         code: |-
           pwd
           ls -l
-          type aws || true
+          ls -l $WERCKER_SOURCE_DIR
+          ls -l $WERCKER_OUTPUT_DIR
+          type pip || true
