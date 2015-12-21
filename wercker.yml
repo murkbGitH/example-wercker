@@ -5,6 +5,7 @@ build:
         code: |-
           uname -a
           php -v
+          php -i > phpinfo.txt
 deploy:
   steps:
     - script:
