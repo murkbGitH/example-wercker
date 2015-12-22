@@ -2,18 +2,14 @@ box: ngyuki/example
 build:
   steps:
     - script:
+        name: php information
         code: |-
           uname -a
           php -v
-          pwd
-          php -i > source.txt
-          php -i > $WERCKER_OUTPUT_DIR/output.txt
+          php -i > $WERCKER_OUTPUT_DIR/wercker-output.txt
 deploy:
   steps:
     - script:
+        name: upload s3
         code: |-
-          pwd
-          ls -l
-          ls -l $WERCKER_SOURCE_DIR
-          ls -l $WERCKER_OUTPUT_DIR
-          type pip || true
+          aws s3 cp wercker-output.txt s3://$AWS_S3_BUCKET/
